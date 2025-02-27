@@ -1,0 +1,15 @@
+{
+    "meta":{},
+    "data":[
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Санкт-Петербург","endCityCode":"led","startDate":"2024-07-20T00:00:00Z","endDate":"2024-07-25T00:00:00Z","price":2690,"searchToken":"MOW2007LED2507Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Нижний Новгород","endCityCode":"goj","startDate":"2024-08-07T08:15:00Z","endDate":"2024-08-13T09:10:00Z","price":3140,"searchToken":"MOW0708GOJ1308Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Махачкала","endCityCode":"mcx","startDate":"2024-04-16T10:00:00Z","endDate":"2024-04-20T12:00:00Z","price":4570,"searchToken":"MOW1604MCX2004Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Калининград","endCityCode":"kgd","startDate":"2024-10-10T21:00:00Z","endDate":"2024-10-15T13:00:00Z","price":4570,"searchToken":"MOW1010KGD1510Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Казань","endCityCode":"kzn","startDate":"2024-07-21T15:00:00Z","endDate":"2024-07-30T15:00:00Z","price":4760,"searchToken":"MOW2107KZN3007Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Самара","endCityCode":"kuf","startDate":"2024-09-06T11:00:00Z","endDate":"2024-09-11T11:00:00Z","price":4902,"searchToken":"MOW0609KUF1109Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Краснодар","endCityCode":"krr","startDate":"2024-08-15T09:30:00Z","endDate":"2024-08-23T10:30:00Z","price":4914,"searchToken":"MOW1508KRR2308Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Екатеринбург","endCityCode":"svx","startDate":"2024-07-20T12:00:00Z","endDate":"2024-07-26T12:00:00Z","price":5096,"searchToken":"MOW2007SVX2607Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Волгоград","endCityCode":"vog","startDate":"2024-07-27T11:10:00Z","endDate":"2024-08-10T10:20:00Z","price":5140,"searchToken":"MOW2707VOG1008Y100"},
+        {"startCity":"Москва","startCityCode":"mow","endCity":"Пермь","endCityCode":"pee","startDate":"2024-07-09T21:00:00Z","endDate":"2024-07-16T00:00:00Z","price":5140,"searchToken":"MOW0907PEE1607Y100"}
+    ]
+}
