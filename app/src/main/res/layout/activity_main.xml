@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E0FFFF"
+    android:background="#20B2AA"
     tools:context=".MainActivity">
 
     <TextView
@@ -66,15 +66,17 @@
         android:layout_gravity="center"
         android:fontFamily="serif"
         android:text="Создать"
+        android:backgroundTint="#C71585"
         android:textSize="20sp" />
+
     <TextView
         android:id="@+id/TextViewAvto"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="58dp"
-        android:fontFamily="serif"
-        android:rotationX="0"
         android:layout_gravity="center"
         android:layout_marginTop="120sp"
+        android:fontFamily="serif"
+        android:rotationX="0"
         android:text="Есть аккаунт?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

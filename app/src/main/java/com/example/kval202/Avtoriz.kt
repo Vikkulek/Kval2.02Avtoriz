@@ -18,6 +18,11 @@ class Avtoriz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_avtoriz)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val userLogin: EditText = findViewById(R.id.editTextLogin)
         val userPassword: EditText = findViewById(R.id.editTextPassword)
@@ -42,11 +47,11 @@ class Avtoriz : AppCompatActivity() {
                 if (isHere){
                     Toast.makeText(this,"Пользователь $login Авторизован",Toast.LENGTH_SHORT).show()
 
-                    userLogin.text.clear()
-                    userPassword.text.clear()
-
-//                    val intent = Intent(this, TableActivity::class.java)
-//                    startActivity(intent)
+                    val intent = Intent(this, Profile::class.java)
+                    intent.putExtra("login", login)
+                    //intent.putExtra("email", email)
+                    startActivity(intent)
+                    finish()
                 }
                 else
                     Toast.makeText(this,"Пользователь $login ненайден",Toast.LENGTH_SHORT).show()
