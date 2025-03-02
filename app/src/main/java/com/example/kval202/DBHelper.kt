@@ -34,4 +34,18 @@ class DBHelper(val context: Context, val factory:SQLiteDatabase.CursorFactory?) 
         val result = db.rawQuery("SELECT * FROM users WHERE login = '$login' AND password = '$password'",null)
         return result.moveToFirst()
     }
+
+    fun updateLoginByCurrentLogin(currentLogin: String, newLogin: String): Boolean {
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put("login", newLogin)
+
+        // Обновляем запись в таблице по текущему логину
+        val rowsUpdated = db.update("users", values, "login = ?", arrayOf(currentLogin))
+
+        db.close()
+
+        // Если строк обновлено больше 0, то обновление прошло успешно
+        return rowsUpdated > 0
+    }
 }

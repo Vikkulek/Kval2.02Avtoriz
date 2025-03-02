@@ -19,6 +19,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val userLogin:EditText = findViewById(R.id.editTextLogin)
         val userEmail:EditText = findViewById(R.id.editTextEmail)
@@ -44,12 +49,19 @@ class MainActivity : AppCompatActivity() {
                 db.addUser(user)
                 Toast.makeText(this,"Регистрация $login выполнена",Toast.LENGTH_SHORT).show()
 
-//                val intent = Intent(this, TableActivity::class.java)
+                val intent = Intent(this, Profile::class.java)
+                intent.putExtra("login", login)
+                intent.putExtra("email", email)
+                startActivity(intent)
+                finish()
+
+
+//                val intent = Intent(this, Profile::class.java)
 //                startActivity(intent)
 
-                userLogin.text.clear()
-                userEmail.text.clear()
-                userPassword.text.clear()
+//                userLogin.text.clear()
+//                userEmail.text.clear()
+//                userPassword.text.clear()
             }
 
 

@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Kval202" parent="Base.Theme.Kval202" />
+    <style name="Theme.Kval202.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Kval202.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Kval202.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
