@@ -1,71 +1,40 @@
 package com.example.kval202
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.kval202.R.*
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        setContentView(R.layout.activity_main)
 
-        val userLogin:EditText = findViewById(R.id.editTextLogin)
-        val userEmail:EditText = findViewById(R.id.editTextEmail)
-        val userPassword:EditText = findViewById(R.id.editTextPassword)
-        val button:Button = findViewById(R.id.buttonReg)
-        val goToAvtoriz:TextView = findViewById(R.id.TextViewAvto)
+        val loginField: EditText = findViewById(R.id.editTextLogin)
+        val emailField: EditText = findViewById(R.id.editTextEmail)
+        val passwordField: EditText = findViewById(R.id.editTextPassword)
 
-        goToAvtoriz.setOnClickListener{
-            val intent = Intent(this, Avtoriz::class.java)
-            startActivity(intent)
-        }
-
-        button.setOnClickListener{
-            val login = userLogin.text.toString().trim()
-            val email = userEmail.text.toString().trim()
-            val password = userPassword.text.toString().trim()
-
-            if (login == "" || email == "" || password == "" )
-                Toast.makeText(this,"Заполните все поля",Toast.LENGTH_LONG).show()
-            else {
-                val user = User(login,email,password)
-                val db = DBHelper(this,null)
-                db.addUser(user)
-                Toast.makeText(this,"Регистрация $login выполнена",Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this, Profile::class.java)
-                intent.putExtra("login", login)
-                intent.putExtra("email", email)
-                startActivity(intent)
+        findViewById<Button>(R.id.buttonReg).setOnClickListener {
+            val login = loginField.text.toString().trim()
+            val email = emailField.text.toString().trim()
+            val password = passwordField.text.toString().trim()
+            if (login.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
+                DBHelper(this).addUser(User(login, email, password))
+                Toast.makeText(this, "Регистрация успешна", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, Profile::class.java).apply {
+                    putExtra("login", login)
+                })
                 finish()
-
-
-//                val intent = Intent(this, Profile::class.java)
-//                startActivity(intent)
-
-//                userLogin.text.clear()
-//                userEmail.text.clear()
-//                userPassword.text.clear()
+            } else {
+                Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show()
             }
-
-
         }
 
+        findViewById<TextView>(R.id.TextViewAvto).setOnClickListener {
+            startActivity(Intent(this, Avtoriz::class.java))
+        }
     }
 }

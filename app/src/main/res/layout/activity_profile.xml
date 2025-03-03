@@ -38,13 +38,14 @@
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="480dp"
         android:text="Почта"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLogin"
-        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewLogin"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -60,103 +61,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:hint="Введите имя"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.257"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442"
-        tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/resourceTypeEditText"
-        android:layout_width="344dp"
-        android:layout_height="42dp"
-        android:hint="Тип ресурса"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/dateButton"
-        android:layout_width="247dp"
-        android:layout_height="55dp"
-        android:text="Выбрать дату"
-        app:layout_constraintBottom_toTopOf="@+id/selectedDateTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resourceTypeEditText"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        android:backgroundTint="#C71585"/>
 
-    <TextView
-        android:id="@+id/selectedDateTextView"
-        android:layout_width="271dp"
-        android:layout_height="23dp"
-        android:text="Дата не выбрана"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resourceTypeEditText"
-        app:layout_constraintVertical_bias="0.171" />
 
-    <Button
-        android:id="@+id/timeButton"
-        android:layout_width="236dp"
-        android:layout_height="52dp"
-        android:backgroundTint="#C71585"
-        android:text="Выбрать время"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectedDateTextView"
-        app:layout_constraintVertical_bias="0.068" />
 
-    <TextView
-        android:id="@+id/selectedTimeTextView"
-        android:layout_width="275dp"
-        android:layout_height="16dp"
-        android:text="Время не выбрано"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeButton"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <EditText
-        android:id="@+id/additionalInfoEditText"
-        android:layout_width="337dp"
-        android:layout_height="38dp"
-        android:hint="Дополнительная информация"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectedTimeTextView"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="250dp"
-        android:layout_height="53dp"
-        android:text="Отправить заявку"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/additionalInfoEditText"
-        app:layout_constraintVertical_bias="0.113"
-        android:backgroundTint="#C71585"/>
 
     <Button
         android:id="@+id/buttonTable"

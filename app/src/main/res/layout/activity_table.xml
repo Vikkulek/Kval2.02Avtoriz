@@ -36,11 +36,11 @@
         app:layout_constraintVertical_bias="0.537" />
 
     <EditText
-        android:id="@+id/editTextDeleteToken"
+        android:id="@+id/editTextFavoriteToken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Токен для удаления"
+        android:hint="Токен для избранного"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -160,10 +160,10 @@
         app:layout_constraintVertical_bias="0.534" />
 
     <Button
-        android:id="@+id/buttonDelete"
+        android:id="@+id/buttonFavorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Обновить"
+        android:text="В избранное"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.843"
